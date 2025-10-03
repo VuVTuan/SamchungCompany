@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.control-container {
+  font-family: Arial, sans-serif;
+  color: #000;
+  min-height: 100vh; /* makes the page full height */
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  background: url("../assets/First.png") center/cover no-repeat;
+  height: 400px;
+}
+
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.6);
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.hero-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+/* Just for demonstration: create scrollable content below */
+.demo-content {
+  height: 1000px;
+  background: linear-gradient(white, #ddd);
+}
