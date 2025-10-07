@@ -1,5 +1,7 @@
 import "../Components/ComponentStyle.css";
-import logo from "../assets/CompanyLogo.png"; // Replace with your actual logo file
+import logo from "../assets/CompanyLogo.png"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
@@ -25,7 +27,7 @@ const Header = () => {
         <div className="search-box">
           <input type="text" placeholder="Tìm kiếm" />
           <button>
-            <span role="img" aria-label="search">🔍</span>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
         </div>
       </nav>
