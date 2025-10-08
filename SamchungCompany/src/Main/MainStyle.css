@@ -14,6 +14,7 @@ html, body {
   flex-direction: column;
 }
 
+/* Header CSS */
 
 .img-overlay {
   background: rgba(255, 255, 255, 0.2);
@@ -40,9 +41,8 @@ html, body {
   
 }
 
+/* Introduction CSS */
 .briefly-introduce {
-  max-width: 700px;
-  margin: 40px 25px 40px auto;
   padding: 20px 24px;
   background: rgba(255,255,255,0.95);
   border-radius: 18px;
@@ -50,6 +50,9 @@ html, body {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   font-size: 1.15rem;
   color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .briefly-introduce h2 {
@@ -70,19 +73,21 @@ html, body {
 
 .intro-layout {
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  flex-direction: column;
   gap: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap; /* Allow boxes to stack on small screens */
+  margin: 4rem 5vw 2rem 5vw; /* use vw for better scaling */
+}
+
+.intro-row {
+  display: flex;
+  align-items: stretch; /* Ensures both boxes have equal height */
+  gap: 2rem;
+  width: 100%;
 }
 
 .intro-image-box,
 .briefly-introduce {
-  flex: 1 1 350px; /* Grow, shrink, minimum width */
-  min-width: 300px;
-  max-width: 700px;
+  flex: 1 1 0;
   width: 100%;
   background: rgba(255,255,255,0.95);
   border-radius: 18px;
@@ -97,13 +102,26 @@ html, body {
 
 .intro-image-box {
   align-items: center;
-  height: auto; /* Remove fixed height */
 }
 
 .intro-image-box img {
   max-width: 80%;
-  max-height: 400px;
+  max-height: 350px; 
   object-fit: contain;
   border-radius: 12px;
   margin: auto;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+  .intro-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro-image-box,
+  .briefly-introduce {
+    width: 100%;
+    min-width: 0;
+    max-width: 700px;
+  }
 }
