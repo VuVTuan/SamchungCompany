@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import "./Main/MainStyle.css";
+import FirstDashboardIMG from "./assets/FirstDashboardIMG.png";
+import SecDashboardIMG from "./assets/SecDashboardIMG.png";
+import BriefIntroduce from "./Main/Home/BrieflyIntroduce";
+
+const carouselItems = [
+  {image: FirstDashboardIMG,},
+  {image: SecDashboardIMG,},
+];
 
 const ControlSystem = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentItem = carouselItems[currentIndex];
+
   return (
     <div className="control-container">
       <Header />
 
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-overlay">
-          <div className="hero-text">
-            <h1>
-              CÔNG TY TRÁCH NHIỆM HỮU HẠN <br />
-              MỘT THÀNH VIÊN SAMCHUNG
-            </h1>
-            <p>Chuyên: Gia công dập ly</p>
-          </div>
+      {/* Hero Section with carousel */}
+      <section className="img">
+        <div
+          className="img-carousel"
+          style={{
+            backgroundImage: `url(${currentItem.image})`,
+            transition: "background-image 1s ease-in-out",
+          }}
+        >
+          
         </div>
       </section>
 
-      {/* Extra content to test scroll */}
-      <div className="demo-content"></div>
+      <BriefIntroduce/>
 
       <Footer />
     </div>
