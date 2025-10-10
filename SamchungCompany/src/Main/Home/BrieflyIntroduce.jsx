@@ -26,7 +26,18 @@ function BrieflyIntroduce() {
           <img src={CompanyLogo} alt="Company Logo" />
         </div>
       </div>
-      {/* Add more .intro-row as needed */}
+      
+      
+      {/* Third row */}
+      <div className="intro-row">
+        <div className="intro-image-box">
+          <img src={CompanyLogo} alt="Company Logo" />
+        </div>
+        <div className="briefly-introduce">
+          <h2>SƠ LƯỢC VỀ CÔNG TY</h2>
+          <p style={{ whiteSpace: "pre-line" }}>{text}</p>
+        </div>
+      </div>
     </section>
     
   );

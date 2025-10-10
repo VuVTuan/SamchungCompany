@@ -1,52 +1,57 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import "./Main/MainStyle.css";
+import logo from "./assets/CompanyLogo.png";
 import FirstDashboardIMG from "./assets/FirstDashboardIMG.png";
-import SecDashboardIMG from "./assets/SecDashboardIMG.png";
-import BriefIntroduce from "./Main/Home/BrieflyIntroduce";
 
-const carouselItems = [
-  {image: FirstDashboardIMG,},
-  {image: SecDashboardIMG,},
-];
+const ControlSystem = () => (
+  <div className="hero-section" style={{
+    backgroundImage: `url(${FirstDashboardIMG})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh",
+    position: "relative"
+  }}>
+    <div className="hero-overlay">
 
-const ControlSystem = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+      <div className="hero-header-row">
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentItem = carouselItems[currentIndex];
-
-  return (
-    <div className="control-container">
-      <Header />
-
-      {/* Hero Section with carousel */}
-      <section className="img">
-        <div
-          className="img-carousel"
-          style={{
-            backgroundImage: `url(${currentItem.image})`,
-            transition: "background-image 1s ease-in-out",
-          }}
-        >
-          
+        <div className="logo-top-left">
+          <img src={logo} alt="Samchung Logo" className="logo" />
         </div>
-      </section>
 
-      <BriefIntroduce/>
+        <div className="company-info">
+          <h1>DẬP LY SAMCHUNG</h1>
+          <p>Địa chỉ: 139/2 khu phố Bình Phước A, phường An Phú. TP.HCM</p>
+        </div>
 
-      <Footer />
+        <nav className="nav-bar nav-bar-header">
+          <ul>
+            <li>TRANG CHỦ</li>
+            <li>GIỚI THIỆU</li>
+            <li>SẢN PHẨM</li>
+            <li>LIÊN HỆ</li>
+          </ul>
+        </nav>
+
+      </div>
+      
+      <div className="hero-header-content">
+        
+        <div className="hotline">
+          CÔNG TY TRÁCH NHIỆM HỮU HẠN MỘT THÀNH VIÊN SAMCHUNG <br />
+          <strong>Chuyên: Gia công dập ly</strong> 
+        </div>
+      </div>  
+
+      <div className="bottom-left-button">
+        <button className="primary-btn">Liên hệ ngay</button>
+      </div>
+      
+
     </div>
-  );
-};
+  </div>
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

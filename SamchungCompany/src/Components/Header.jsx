@@ -7,13 +7,22 @@ const Header = () => {
   return (
     <header className="header">
       <div className="top-bar">
-        <img src={logo} alt="Samchung Logo" className="logo" />
+        <div className="header-left">
+          <img src={logo} alt="Samchung Logo" className="logo" />
+        </div>
         <div className="company-info">
           <h1>DẬP LY SAMCHUNG</h1>
-          <p>
-            Địa chỉ: 139/2 khu phố Bình Phước A, phường An Phú. TP.HCM <br />
-            <strong>0982331661</strong>
-          </p>
+          <p>Địa chỉ: 139/2 khu phố Bình Phước A, phường An Phú. TP.HCM</p>
+        </div>
+        <div className="header-right">
+          <div className="hotline-frame">
+            <p className="hotline">
+              HOTLINE
+              <br />
+              <strong>0982 331 661</strong><br />
+              <strong>0973 881 229</strong>
+            </p>
+          </div>
         </div>
       </div>
 
