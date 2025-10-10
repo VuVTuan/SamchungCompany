@@ -36,8 +36,7 @@ const ControlSystem = () => {
             backgroundImage: `url(${currentItem.image})`,
             transition: "background-image 1s ease-in-out",
           }}
-        >
-          
+        >   
         </div>
       </section>
 
