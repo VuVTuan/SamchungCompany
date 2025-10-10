@@ -100,16 +100,6 @@
   
 }
 
-.nav-bar li:not(:last-child) {
-  border-right: 5px solid #B29E7D;
-}
-
-.nav-bar li.active {
-  background: #B29E7D;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-}
 
 .nav-bar .search-box {
   display: flex;
