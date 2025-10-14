@@ -1,7 +1,9 @@
 import text from "../../assets/Introudciton.text?raw";
 import CompanyLogo from "../../assets/FirstDashboardIMG.png"; // Example image
+import React from "react";
 
-function BrieflyIntroduce() {
+
+function Introduce() {
   return (
     <section className="intro-layout">
       {/* First row */}
@@ -43,4 +45,4 @@ function BrieflyIntroduce() {
   );
 }
 
-export default BrieflyIntroduce;
+export default Introduce;
