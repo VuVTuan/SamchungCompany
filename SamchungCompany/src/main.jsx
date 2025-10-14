@@ -5,16 +5,16 @@ import logo from "./assets/CompanyLogo.png";
 import FirstDashboardIMG from "./assets/FirstDashboardIMG.png";
 
 const ControlSystem = () => (
-  <div className="hero-section" style={{
+  <div className="img-section" style={{
     backgroundImage: `url(${FirstDashboardIMG})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     minHeight: "100vh",
     position: "relative"
   }}>
-    <div className="hero-overlay">
+    <div className="img-overlay">
 
-      <div className="hero-header-row">
+      <div className="img-header-row">
 
         <div className="logo-top-left">
           <img src={logo} alt="Samchung Logo" className="logo" />
@@ -36,11 +36,13 @@ const ControlSystem = () => (
 
       </div>
       
-      <div className="hero-header-content">
+      <div className="intro-content">
         
-        <div className="hotline">
-          CÔNG TY TRÁCH NHIỆM HỮU HẠN MỘT THÀNH VIÊN SAMCHUNG <br />
-          <strong>Chuyên: Gia công dập ly</strong> 
+        <div className="intro">
+          CÔNG TY TRÁCH NHIỆM HỮU HẠN MỘT THÀNH VIÊN SAMCHUNG 
+          <br />
+          <br />
+          <strong>Chuyên: Gia công dập ly theo yêu cầu</strong> 
         </div>
       </div>  
 
