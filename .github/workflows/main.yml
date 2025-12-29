@@ -1,0 +1,30 @@
+name: Basic CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Get the code
+      - uses: actions/checkout@v3
+
+      # 2) Use Node.js (for JavaScript websites)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3) Install dependencies (if you have package.json)
+      - run: npm install
+
+      # 4) Run a basic build or test — change or remove if your project has none
+      - run: echo "No tests yet, but CI is working!"
+
