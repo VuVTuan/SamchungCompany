@@ -1,17 +1,18 @@
 /* === HEADER === */
 .header .top-bar {
   display: flex;
-  justify-content: space-between;        /* centers horizontally */
+  justify-content: center;        /* centers horizontally */
   align-items: center;           /* centers vertically */
-  background: linear-gradient(135deg, #B29E7D, #4C4436);
+  background: linear-gradient(105deg, #B29E7D, #363026);
   color: white;
   padding: 15px 20px;
+  height: 150px;
 }
 
 /* Oval logo styling */
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%; /* makes it round/oval */
   border: 3px solid white;
@@ -19,25 +20,47 @@
 }
 
 /* Center text relative to the logo */
-.company-info {
+.header-left,
+.header-right {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-info {
+  flex: 2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .company-info h1 {
   font-size: 40px;
-  margin: 0;
-  line-height: 1.2;
 }
 
 .company-info p {
-  font-size: 20px;
-  margin: 5px 0 0;
+  font-size: 25px;
 }
 
 /* Right section is just a spacer to keep center text balanced */
+
 .header-right {
-  width: 100px;  /* same as logo width */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotline {
+  color: #fff;         /* Or any color that stands out */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 4px #333; /* Optional for better readability */
+  margin: 0;
 }
 
 /* === NAVIGATION BAR === */
@@ -47,6 +70,9 @@
   align-items: center;
   background-color: #b0aeaa;
   padding: 8px 20px;
+  height: 40px;
+  background: linear-gradient(90deg, #b0aeaa 80%, #b0aeaa 100%);
+
 }
 
 .nav-bar ul {
@@ -64,7 +90,16 @@
   flex: 1;
   text-align: center;
   font-weight: 500;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  transform: translateY(0);
 }
+
+.nav-bar li:hover {
+  transform: translateY(-3px);
+  
+}
+
 
 .nav-bar .search-box {
   display: flex;
